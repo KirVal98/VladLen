@@ -1,36 +1,23 @@
 <?php
+//111
     echo "Задача 1".PHP_EOL;
-
 $x = 6;
 $y = 15;
 $z = 4;
-echo "Переменная x = $x<br />";
-echo "Переменная y = $y<br />";
-echo "Переменная z = $z<br />";
-
-echo "Результат следующей операции $x += $y - $x++ * $z будет =";
 echo $x += $y - $x++ * $z;
-echo "<br />";
-echo "Результат следующей операции $z = - $x - $y * 5 будет =";
 echo $z = - $x - $y * 5;
-echo "<br />";
-echo "Результат следующей операции $y /= $x + 5 % $z будт =";
 echo $y /= $x + 5 % $z;
-echo "<br />";
-echo "Результат следующей операции $z = $x++ + $y * 5 будет =";
 echo $z = $x++ + $y * 5;
-echo "<br />";
-echo "Результат следующей операции $x = $y - $x++ * $z будет =";
 echo $x = $y - $x++ * $z;
-echo "<br />";
-    echo "Задача 2<br />";
+echo "new".PHP_EOL;
+    echo "Задача 2".PHP_EOL;
 $x = 6;
 $y = 15;
 $z = 4;
 $sum = $x + $y + $z;
-$diff = $x - $y;
-$mult = $x * $y;
-$dil = $x / $y;
+//$diff = $x - $y;
+//$mult = $x * $y;
+//$dil = $x / $y;
 //$ostatok = $x % %y;
 echo "Сумма из $x и $y и $z = $sum<br />";
 echo "Средняе арефмитическое будет =";
@@ -68,16 +55,48 @@ $B = 50;
 
 for ($A = 10; $A < 50; $A++)
 {
-    if ($A % 2 == 0 && $A != 0){
+    if ($A % 2 == 0 ){
         echo($A);
     }
 }
 echo "<br />";
-//Обязательно объясни мне что такое &&
+
+
 echo "Задача 7";
 echo "<br />";
 $array = array (1,2,3,4,5,6,7,8,9,10,20);
-echo $array[0];
+echo max($array) ."<br/>";
+echo min($array) ."<br/>";
+echo array_sum($array) ."<br/>";
+echo array_sum($array) / count($array)."<br/>";
+foreach ($array as $value) {
+    if ($value % 2 != 0) {
+        echo $value . '<br />';
+    }
+}
+echo "Задача 8";
+echo "<hr />";
+$array = array (array(3,4,-3,-4,-1), array(-2,-3,6,8,9), array(4,-9,7,-6,9), array(-5,5,-4,3,-2), array(-6,6,4,-5,8));
+foreach ($array as &$value) {
+    $array[0][0] = 1;
+    $array[1][1] = 0;
+    $array[2][2] = 1;
+    $array[3][3] = 1;
+    $array[4][4] = 1;
+}
+echo '<pre>';
+print_r($array);
+echo '</pre>';
+
+echo "<hr />";
+for ($i = 0; $i < count($array); $i++) {
+    for ($u = 0; $u <count($array[$i]); $u++){
+        echo $array[$i][$u]." ";
+    }
+
+    echo "<br/>";
+}
+
 
 
 
